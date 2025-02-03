@@ -3,31 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="GoBora - Seu guia remoto para viagens sob medida. Roteiros personalizados com base no seu orçamento. Atendimento 100% humano!">
     <meta name="keywords" content="guia remoto de viagens, assistente pessoal de viagens, roteiro personalizado, viagem econômica, planejamento de viagem">
     <meta name="author" content="GoBora">
     <title>GoBora - Seu Guia Remoto para Viagens Sob Medida</title>
-    
 </head>
 <body>
-    <header>GoBora - Seu Guia Remoto para Viagens Sob Medida</header>
+    <header>
+        <h1>GoBora - Seu Guia Remoto para Viagens Sob Medida</h1>
+        <p>Planeje sua viagem do seu jeito com roteiros personalizados e atendimento 100% humano!</p>
+    </header>
+
     <section>
-        <div class="card">
-            <h1>Viaje do seu jeito, no seu tempo e sem gastar mais do que pode!</h1>
+        <article class="card">
+            <h2>Viaje do seu jeito, no seu tempo e sem gastar mais do que pode!</h2>
             <p>Com a <strong>GoBora</strong>, você tem um <strong>assistente pessoal de viagens</strong> que planeja seu roteiro de forma 100% personalizada, baseado no seu orçamento, preferências e estilo de viagem.</p>
-        </div>
-        <div class="card">
+        </article>
+
+        <section class="benefits">
             <h2>Por que escolher a GoBora?</h2>
-            <ul>
-                <li><strong>✅ Economia:</strong> Pague apenas R$149,90 e tenha um roteiro completo feito para caber no seu bolso.</li>
-                <li><strong>✅ Liberdade:</strong> Viaje no seu ritmo, sem depender de pacotes fechados.</li>
-                <li><strong>✅ Planejamento Inteligente:</strong> Selecionamos os melhores hotéis, passeios e restaurantes dentro do seu orçamento.</li>
-                <li><strong>✅ Experiência Personalizada:</strong> Seja uma viagem <strong>sozinho, em casal, com amigos ou família</strong>, seu roteiro será único.</li>
-                <li><strong>✅ Praticidade:</strong> Receba seu roteiro por e-mail em até <strong>2 dias úteis</strong>!</li>
-            </ul>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-wallet"></i>
+                    <h3>Economia</h3>
+                    <p>Pague apenas R$149,90 e tenha um roteiro completo feito para caber no seu bolso.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-plane"></i>
+                    <h3>Liberdade</h3>
+                    <p>Viaje no seu ritmo, sem depender de pacotes fechados.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Planejamento Inteligente</h3>
+                    <p>Selecionamos os melhores hotéis, passeios e restaurantes dentro do seu orçamento.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-user-check"></i>
+                    <h3>Experiência Personalizada</h3>
+                    <p>Seu roteiro é feito sob medida para sua viagem, seja sozinho, em casal, com amigos ou família.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <h3>Praticidade</h3>
+                    <p>Receba seu roteiro por e-mail em até 2 dias úteis!</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="counter">
+            +<span id="counter-value">150</span> roteiros personalizados criados!
         </div>
-        <div class="card">
+
+        <article class="card">
             <h2>Como funciona?</h2>
             <div class="step">
                 <div class="step-number">1</div>
@@ -41,8 +71,33 @@
                 <div class="step-number">3</div>
                 <p>Você recebe tudo por e-mail, pronto para usar!</p>
             </div>
-        </div>
-        <a href="#" class="button">Solicite seu roteiro agora!</a>
+        </article>
+
+        <a href="https://wa.me/5587999178060?text=Olá,%20quero%20um%20roteiro%20personalizado!" 
+   class="whatsapp-button" 
+   target="_blank">
+   Solicite seu roteiro agora!
+</a>
+<div class="guarantee">
+    <p><strong>Garantia:</strong> Se não ficar satisfeito, ajustamos seu roteiro gratuitamente!</p>
+</div>
     </section>
 </body>
+<script>
+    // Função para animar a contagem
+    let counterValue = document.getElementById('counter-value');
+    let targetValue = 150; // Altere este valor conforme necessário
+
+    let currentValue = 0;
+    let increment = Math.ceil(targetValue / 100); // Ajuste a velocidade de incremento
+    let interval = setInterval(function() {
+        currentValue += increment;
+        if (currentValue >= targetValue) {
+            clearInterval(interval);
+            currentValue = targetValue;
+        }
+        counterValue.textContent = currentValue;
+    }, 30); // Intervalo de tempo para animação (quanto menor, mais rápido)
+</script>
+
 </html>

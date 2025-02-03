@@ -1,99 +1,184 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #27ae60;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --card-bg: #ffffff;
+    --border-radius: 15px;
+}
 
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #27ae60;
-            --background-color: #f9f9f9;
-            --text-color: #333;
-            --card-bg: #ffffff;
-            --border-radius: 15px;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-        body {
-            background-color: var(--background-color);
-            color: var(--text-color);
-            text-align: center;
-        }
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 20px;
-            font-size: 24px;
-            border-bottom-left-radius: var(--border-radius);
-            border-bottom-right-radius: var(--border-radius);
-        }
-        section {
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
-        }
-        .card {
-            background: var(--card-bg);
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: var(--border-radius);
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        .button {
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 15px 25px;
-            text-decoration: none;
-            border-radius: var(--border-radius);
-            font-size: 18px;
-            display: inline-block;
-            transition: background-color 0.3s;
-        }
-        .button:hover {
-            background-color: #219150;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        ul li {
-            margin: 10px 0;
-            font-size: 18px;
-        }
-        .step {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            margin: 15px 0;
-            background: #eaf5ea;
-            padding: 15px;
-            border-radius: var(--border-radius);
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .step-number {
-            background-color: var(--secondary-color);
-            color: white;
-            font-size: 22px;
-            font-weight: bold;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            margin-right: 15px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-        }
-        @media (max-width: 768px) {
-            section {
-                padding: 15px;
-            }
-            .step {
-                flex-direction: column;
-                text-align: center;
-            }
-            .step-number {
-                margin-bottom: 10px;
-            }
-        }
-        
-    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-align: center;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+section {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+
+.button1 {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-size: 18px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.button1:hover {
+    background-color: #219150;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 15px 0;
+    background: #eaf5ea;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+
+}
+.whatsapp-button {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.whatsapp-button:hover {
+    background-color: #1EBE5D;
+}
+
+.benefits {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.benefit-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-card i {
+    font-size: 40px;
+    color: #27ae60;
+    margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.benefit-card p {
+    font-size: 16px;
+    color: #555;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Contador de Roteiros Entregues */
+.counter {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007BFF;
+    margin-top: 20px;
+}
+
+/* Garantia */
+.guarantee {
+    background-color: #E1F7D5;
+    padding: 15px;
+    margin: 30px 0;
+    border: 2px solid #A4D3A5;
+    text-align: center;
+    font-size: 18px;
+    color: #3C763D;
+}
